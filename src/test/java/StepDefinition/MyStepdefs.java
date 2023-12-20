@@ -29,7 +29,7 @@ public class MyStepdefs extends Locators {
     }
     @Then("Assert the book is added to the basket")
     public void assertTheBookIsAddedToTheBasket() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(500);
         Assert.assertTrue(driver.findElement(ViewBasketText).isDisplayed());
     }
     @Then("Click on shopping cart")
