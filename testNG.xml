@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests Suite" parallel="tests" thread-count="2">
+    <test name="chrome">
+        <parameter name="browserName" value="chrome"></parameter>
+      <classes>
+          <class name="StepDefinition.MyStepdefs"></class>
+      </classes>
+    </test>
+    <test name="firefox">
+        <parameter name="browserName" value="firefox"></parameter>
+          <classes>
+              <class name="StepDefinition.MyStepdefs"></class>
+          </classes>
+    </test>
+</suite>
