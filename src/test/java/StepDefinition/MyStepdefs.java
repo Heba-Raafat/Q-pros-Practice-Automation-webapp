@@ -28,8 +28,8 @@ public class MyStepdefs extends Locators {
         driver.findElement(AddToBasket).click();
     }
     @Then("Assert the book is added to the basket")
-    public void assertTheBookIsAddedToTheBasket() throws InterruptedException {
-        Thread.sleep(500);
+    public void assertTheBookIsAddedToTheBasket(){
+        waitForVisibilityOfElement(driver.findElement(ViewBasketText));
         Assert.assertTrue(driver.findElement(ViewBasketText).isDisplayed());
     }
     @Then("Click on shopping cart")
@@ -50,5 +50,4 @@ public class MyStepdefs extends Locators {
     public void assertBillingDetailsFormDisplayed() {
         Assert.assertTrue(driver.findElement(BillingFormHeader).getText().contains("Billing Details"));
     }
-
 }
